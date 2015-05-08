@@ -93,9 +93,14 @@
                 </form>
             </div>
         </div>
-        <div class="row" ng-show="home.submitted">
+        <div class="row" ng-show="home.submitted && !home.conflict">
             <div class="col-md-12 text-center">
-                <h3>Thank you !</h3>
+                <h3>{{ home.i18n.thanks }}</h3>
+            </div>
+        </div>
+        <div class="row" ng-show="home.submitted && home.conflict">
+            <div class="col-md-12 text-center">
+                <h3>{{ home.i18n.conflict }}</h3>
             </div>
         </div>
     </div>
