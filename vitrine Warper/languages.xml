@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<translations>
+    <translation id="punchline">
+        <en>Lead your picture as far as your friends</en>
+        <fr>Envoyez vos photos aussi loin que vos amis</fr>
+    </translation>
+    <translation id="descriptionWarper">
+        <en>Warper is an application that allows you to create chains between
+          your friends and the world and observe the distance of your influence</en>
+        <fr>Warper est une application qui te permet de créer des chaînes entre
+          tes amis et le monde et d'observer la distance de ton influence</fr>
+    </translation>
+    <translation id="txtNewsletter">
+      <en>Participate and contribute to the beginnings of Warper</en>
+      <fr>Participez et contribuez aux prémices de Warper</fr>
+    </translation>
+    <translation id="submitNewsletter">
+      <en>Subscribe to Newsletter</en>
+      <fr>S'inscrire à la Newsletter</fr>
+    </translation>
+    <translation id="btnTranslate">
+      <en>Submit</en>
+      <fr>Valider</fr>
+    </translation>
+</translations>
