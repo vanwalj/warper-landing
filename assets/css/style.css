@@ -18,6 +18,10 @@ Navigation
     margin-top: 20px;
 }
 
+#landing #ios-mockup img {
+    max-height: 515px;
+}
+
 #landing #newsletter {
     margin-bottom: 30px;
 }

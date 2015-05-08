@@ -23,7 +23,7 @@ angular.module('warperLanding', [])
                 });
         };
 
-        var locale = navigator.language === 'fr' ? 'fr' : 'fr';
+        var locale = navigator.language === 'fr' ? 'fr' : 'en';
         $http.get('/assets/i18n/' + locale + '.json')
             .success(function (data) {
                 home.i18n = data;
