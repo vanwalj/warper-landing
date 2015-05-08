@@ -23,7 +23,8 @@ Navigation
 }
 
 #landing #social-icons .icon {
-    font-size: 50px;
+    font-size: 2.5em;
+    color: #2A9C73;
 }
 
 #landing #social-icons a:hover {
