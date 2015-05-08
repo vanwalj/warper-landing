@@ -1,61 +1,104 @@
 <!DOCTYPE html>
-<html>
-    <head>
+<html ng-app="warperLanding" ng-controller="HomeController as home">
+<head>
     <meta charset = "utf-8">
-      <title> Warper |  Application</title>
-      <link rel="stylesheet" href="css/normalize.css">
-      <link href='http://fonts.googleapis.com/css?family=Changa+One|Open+Sans:400italic,700italic,400,700,800' rel='stylesheet' type='text/css'>   
-      <link rel="stylesheet" href="css/main.css">
-    </head>
-<body>
-  <header>
-    <a href="index.html" id="logo">
-    <h1>Warper</h1>
-    <h2>Lead your picture as far as your friends</h2></a>
-      <nav>
-        <ul>
-          <li><a href="index.html" class="selected">Application</a></li>
-          <li><a href="about.html">About the team</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-  </header>
-    <div id="wrapper">
-      <section>
-        <ul>
-          <li>
-            <a href="img/numbers-01.jpg">
-            <img src="img/numbers-01.jpg" alt="">
-            <p>Experimentation with color and texture</p></a>
-          </li>
-          <li>
-            <a href="img/numbers-02.jpg">
-            <img src="img/numbers-02.jpg" alt="">
-            <p>Playing with mode in Photoshop</p></a>
-          </li>
-          <li>
-            <a href="img/numbers-06.jpg">
-            <img src="img/numbers-06.jpg" alt="">
-            <p>Trying to create an 80's style of glows.</p></a>
-          </li>
-          <li>
-            <a href="img/numbers-09.jpg">
-            <img src="img/numbers-09.jpg" alt="">
-            <p>Experimentation with color and texture</p></a>
-          </li>
-          <li>
-            <a href="img/numbers-12.jpg">
-            <img src="img/numbers-12.jpg" alt="">
-            <p>Experimentation with color and texture</p></a>
-          </li>
-        </ul>
-      </section>
-      <footer>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content='Warper - Alpha' property='og:title'>
+    <meta content='Website' property='og:type'>
+    <meta content='http://warper.co' property='og:url'>
+    <meta content='Lead your pictures as far as your friends' property='og:description'>
 
-        <a href="http://twitter.com/nickrp"><img src="img/twitter-wrap.png" alt="Twitter Logo"></a>
-        <a href="http://facebook.com/nickpettit"><img src="img/facebook-wrap.png" alt="Facebook Logo"></a>
-        <p>&copy; 2015 Xavier Baril.</p>
-      </footer>
+    <link href='http://fonts.googleapis.com/css?family=Exo:300|Raleway:600,400' rel='stylesheet' type='text/css'>
+    <link href="/assets/libs/metrize/style.css" rel="stylesheet" type="text/css" >
+    <link href='/bower_components/bootstrap/dist/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <link href="/assets/css/style.css" rel="stylesheet" type='text/css'>
+
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/assets/js/index.js"></script>
+
+    <link rel="icon" href="/assets/img/favicon.png">
+    <link rel="icon" href="/assets/img/favicon.ico">
+
+    <title>{{ home.i18n.title }}</title>
+</head>
+<body>
+<div class="container" id="landing">
+    <div class="col-md-5">
+        <div class="row">
+            <div class="col-md-12">
+                <img src='/assets/img/iphone6-flatfull.png' alt="iphone" class="img-responsive center-block">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="man">
+                    <div id="eye-l"></div>
+                    <div id="eye-r"></div>
+                    <div id="nose"></div>
+                    <div id="mouth"></div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center" id="wall">{{ home.i18n.alphaDev }}</div>
     </div>
-  </body>
+    <div class="col-md-6">
+        <div class="row">
+            <div class="col-md-12">
+                <img src="/assets/img/Warper_txt_ftrans.png" class="img-responsive center-block">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1>{{ home.i18n.leadYourPictures }}</h1>
+            </div>
+        </div>
+        <div class="row text-center" id="social-icons">
+            <div class="col-xs-4">
+                <a href="https://www.facebook.com/WarperApp">
+                    <span class='icon icon-social-facebook'></span>
+                </a>
+            </div>
+            <div class="col-xs-4">
+                <a href='https://twitter.com/WarperApp'>
+                    <span class='icon icon-social-twitter'></span>
+                </a>
+            </div>
+            <div class="col-xs-4">
+                <a href='mailto:support@warper.co'>
+                    <span class='icon icon-social-email'></span>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h3>{{ home.i18n.warperIsAnApp }}</h3>
+            </div>
+        </div>
+        <div class="row" id="enrol">
+            <div class="col-md-12 text-center">
+                <h4>{{ home.i18n.participateAndContribute }}</h4>
+            </div>
+        </div>
+        <div class="row" id="newsletter" ng-hide="home.submitted">
+            <div class="col-md-12">
+                <form ng-submit="home.submitNewsletter()">
+                    <label>{{ home.i18n.subscribe }}</label>
+                    <div class="input-group">
+                        <input type="email" class="form-control" ng-model="home.newsletterEmail" placeholder="Email">
+                    <span class="input-group-btn">
+                        <button class="btn btn-warning" type="submit">{{ home.i18n.submit }}</button>
+                    </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row" ng-show="home.submitted">
+            <div class="col-md-12 text-center">
+                <h3>Thank you !</h3>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
 </html>
